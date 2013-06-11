@@ -70,7 +70,7 @@
     <Compile Include="Models\Parameters\TableParameters.cs" />
     <Compile Include="Models\Parameters\QueryParameterComparer.cs" />
     <Compile Include="Models\Parameters\SlotLockParameters.cs" />
-    <Compile Include="OAuthValidator.cs" />
+    <Compile Include="Validators\OAuthValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Parameters\QueryParameter.cs" />
     <Compile Include="Builders\ViewModels\ResponseViewModelBuilder.cs" />
