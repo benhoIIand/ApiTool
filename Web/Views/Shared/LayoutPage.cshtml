@@ -1,25 +1,29 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    
-    <style>
-        body { margin: auto; width: 1000px; }
-        #nav { float: left; width: 250px;height: 100%; }
-        #content { margin-left: 300px; }
 
-        .medium-input { width: 500px;height: 100px; }
-        .large-input { width: 100%;height: 400px; }
-    </style>
+    <link rel="stylesheet" href="~/Content/css/core.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/prism.css" type="text/css">
 </head>
-    <body>
-        <div id="nav">
+<body>
+
+    <nav class="global-nav">
+        <h1>toptable's new fucking awesome API</h1>
+    </nav>
+
+    <div class="wrapper">
+        <nav class="api-nav">
             @Html.Partial("Partials/_nav")
-        </div>
-        <div id="content">
+        </nav>
+
+        <div class="main-content">
             @RenderBody()
         </div>
-    </body>
+    </div>
+
+    <script src="~/Scripts/libs/prism.js"></script>
+</body>
 </html>

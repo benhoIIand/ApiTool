@@ -5,16 +5,14 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    
-    <style>
-        .medium-input { width: 500px;height: 100px; }
-        .large-input { width: 100%;height: 600px; }
-    </style>
+
+    <link rel="stylesheet" href="~/Content/css/core.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/prism.css" type="text/css">
 </head>
 <body>
     <div>
@@ -22,7 +20,7 @@
         <h2>@Html.Raw(Model.Url)</h2>
         @Html.TextAreaFor(m => m.AuthHeaders, new { @class = "medium-input" })
         @Html.TextAreaFor(m => m.PostParameters, new { @class = "medium-input" })
-        
+
         <h1>API response:</h1>
         @Html.TextAreaFor(m => m.Response, new { @class = "large-input" })
     </div>

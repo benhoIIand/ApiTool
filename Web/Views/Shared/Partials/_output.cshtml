@@ -2,29 +2,31 @@
 
 @if (!string.IsNullOrEmpty(Model.Url))
 {
-    <h1>API request:</h1>
-    <h3>@Html.Raw(Model.Url)</h3>
-    <br />
+    <h3>API request:</h3>
+    <article>
+        <pre class="highlight">@Html.Raw(Model.Url)</pre>
+    </article>
 }
 
 @if (!string.IsNullOrEmpty(Model.AuthHeaders))
 {
-    @Html.Raw("Authentication params:")
-    @Html.TextAreaFor(m => m.AuthHeaders, new {@class = "medium-input"})
-    <br />
-    <br />
+    <article>
+        <h3>Authentication params:</h3>
+        <pre id="AuthHeaders" class="highlight">@Model.AuthHeaders</pre>
+    </article>
 }
 
 @if (Model.PostParameters != null && Model.PostParameters.Any())
 {
-    @Html.Raw("POST params:")
-    @Html.TextAreaFor(m => m.PostParameters, new {@class = "medium-input"})
-    <br />
-    <br />
+
+    <article>
+        <h3>POST params:</h3>
+        <pre id="PostParameters" class="highlight">@Model.PostParameters</pre>
+    </article>
 }
 
 @if (!string.IsNullOrEmpty(Model.Response))
 {
-    <h1>API response:</h1>
-    @Html.TextAreaFor(m => m.Response, new {@class = "large-input"})
+    <h3>API response:</h3>
+    <pre id="Response" class="language-javascript">@Model.Response</pre>
 }

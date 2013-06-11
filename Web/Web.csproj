@@ -122,7 +122,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\core.css" />
+    <Content Include="Content\css\prism.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\libs\prism.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -173,6 +176,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Partials\_nav.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\core.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

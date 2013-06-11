@@ -1,7 +1,7 @@
 ﻿@using System.Configuration
 <h1>Partner details:</h1>
-<ul>
-    <li>PID - @Html.Raw(ConfigurationManager.AppSettings["PartnerId"])</li>
-    <li>Key - @Html.Raw(ConfigurationManager.AppSettings["ConsumerKey"])</li>
-    <li>Secret -@Html.Raw(ConfigurationManager.AppSettings["ConsumerSecret"])</li>
+<ul class="code">
+    <li>PID - <code>@Html.Raw(ConfigurationManager.AppSettings["PartnerId"])</code></li>
+    <li>Key - <code>@Html.Raw(ConfigurationManager.AppSettings["ConsumerKey"])</code></li>
+    <li>Secret - <code>@Html.Raw(ConfigurationManager.AppSettings["ConsumerSecret"])</code></li>
 </ul>

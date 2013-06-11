@@ -9,15 +9,35 @@
 @Html.Partial("Partials/_partnerDetails")
 
 <form action="/slotlock/invoke" method="POST">
-    Restaurant Id: <input type="text" name="restaurantId" value="@Html.Raw(ConfigurationManager.AppSettings["RestaurantId"])"><br />
-    Party size: <input type="text" name="partySize" value="@Html.Raw(ConfigurationManager.AppSettings["PartySize"])"><br />
-    Date time: <input type="text" name="dateTime" value="@Html.Raw(new DateTime(DateTime.Now.AddDays(1).Year, DateTime.Now.AddDays(1).Month, DateTime.Now.AddDays(1).Day, 19, 00, 00))"><br />
-    Results key: <input type="text" name="resultsKey"><br />                  
-    Security Id: <input type="text" name="securityId"><br />
-    <br /><br />            
-    <input type="submit" value="Get results"> 
-            
-    <a href="/slotlock">Start again</a>
-</form> 
+    <fieldset>
+        <label for="restaurantId">Restaurant Id:</label>
+        <input type="text" name="restaurantId" value="@Html.Raw(ConfigurationManager.AppSettings["RestaurantId"])">
+    </fieldset>
+
+    <fieldset>
+        <label for="partySize">Party size:</label>
+        <input type="text" name="partySize" value="@Html.Raw(ConfigurationManager.AppSettings["PartySize"])">
+    </fieldset>
+
+    <fieldset>
+        <label for="dateTime">Date time:</label>
+        <input type="text" name="dateTime" value="@Html.Raw(new DateTime(DateTime.Now.AddDays(1).Year, DateTime.Now.AddDays(1).Month, DateTime.Now.AddDays(1).Day, 19, 00, 00))">
+    </fieldset>
+
+    <fieldset>
+        <label for="resultsKey">Results key:</label>
+        <input type="text" name="resultsKey">
+    </fieldset>
+
+    <fieldset>
+        <label for="securityId">Security Id:</label>
+        <input type="text" name="securityId">
+    </fieldset>
+
+    <div class="buttons">
+        <input type="submit" class="btn btn-go" value="Get results">
+        <a href="/restaurant" class="start-again">Start again</a>
+    </div>
+</form>
 
 @Html.Partial("Partials/_output", Model)

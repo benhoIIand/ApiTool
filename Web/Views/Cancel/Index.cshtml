@@ -9,13 +9,25 @@
 @Html.Partial("Partials/_partnerDetails")
 
 <form action="/cancel/invoke" method="POST">
-    Restaurant Id: <input type="text" name="restaurantId" value="@Html.Raw(ConfigurationManager.AppSettings["RestaurantId"])"><br />
-    Confirmation number: <input type="text" name="confirmationNumber"><br />                  
-    Email: <input type="text" name="email"><br />
-    <br /><br />     
-    <input type="submit" value="Get results"> 
-            
-    <a href="/cancel">Start again</a>
-</form> 
+    <fieldset>
+        <label for="restaurantId">Restaurant Id:</label>
+        <input type="text" name="restaurantId" value="@Html.Raw(ConfigurationManager.AppSettings["RestaurantId"])">
+    </fieldset>
+
+    <fieldset>
+        <label for="confirmationNumber">Confirmation number:</label>
+        <input type="text" name="confirmationNumber" value="">
+    </fieldset>
+
+    <fieldset>
+        <label for="restaurantId">Email:</label>
+        <input type="text" name="email" value="">
+    </fieldset>
+
+    <div class="buttons">
+        <input type="submit" class="btn btn-go" value="Get results">
+        <a href="/restaurant" class="start-again">Start again</a>
+    </div>
+</form>
 
 @Html.Partial("Partials/_output", Model)
