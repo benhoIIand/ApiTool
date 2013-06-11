@@ -1,0 +1,19 @@
+﻿@using System.Configuration
+@model Core.ViewModels.ResponseViewModel
+
+@{
+    ViewBag.Title = "Api Tool -> Restaurant";
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+
+@Html.Partial("Partials/_partnerDetails")
+
+<form action="/restaurant/invoke" method="POST">
+    Restaurant Id: <input type="text" name="restaurantId" value="@Html.Raw(ConfigurationManager.AppSettings["RestaurantId"])"><br />
+    <br /><br />             
+    <input type="submit" value="Get results"> 
+            
+    <a href="/restaurant">Start again</a>
+</form> 
+
+@Html.Partial("Partials/_output", Model)

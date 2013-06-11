@@ -1,0 +1,13 @@
+C:\Demos\ApiTool\Core\bin\Debug\Core.dll
+C:\Demos\ApiTool\Core\bin\Debug\Core.pdb
+C:\Demos\ApiTool\Core\obj\Debug\Core.dll
+C:\Demos\ApiTool\Core\obj\Debug\Core.pdb
+C:\Demos\ApiTool\Core\bin\Debug\System.Net.Http.dll
+C:\Demos\ApiTool\Core\bin\Debug\System.Net.Http.xml
+C:\src\web\ApiTool\Core\bin\Debug\Core.dll
+C:\src\web\ApiTool\Core\bin\Debug\Core.pdb
+C:\src\web\ApiTool\Core\bin\Debug\System.Net.Http.dll
+C:\src\web\ApiTool\Core\bin\Debug\System.Net.Http.xml
+C:\src\web\ApiTool\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\src\web\ApiTool\Core\obj\Debug\Core.dll
+C:\src\web\ApiTool\Core\obj\Debug\Core.pdb

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D32D2602-3CFC-4E31-AC8F-90A769E90D9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders\AuthorizationHeaderBuilder.cs" />
+    <Compile Include="Builders\Criteria\CancelCriteriaBuilder.cs" />
+    <Compile Include="Builders\Criteria\MakeCriteriaBuilder.cs" />
+    <Compile Include="Builders\Criteria\RestaurantCriteriaBuilder.cs" />
+    <Compile Include="Builders\Criteria\TableCriteriaBuilder.cs" />
+    <Compile Include="Builders\HashAlgorithmBuilder.cs" />
+    <Compile Include="Builders\OAuthSignitureBuilder.cs" />
+    <Compile Include="Builders\Criteria\SlotLockCriteriaBuilder.cs" />
+    <Compile Include="Builders\QueryParameterBuilder.cs" />
+    <Compile Include="Builders\WebResponseBuilder.cs" />
+    <Compile Include="Constants\oAuthConstants.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\AuthenticationExtentions.cs" />
+    <Compile Include="Extensions\UrlExtensions.cs" />
+    <Compile Include="Models\Criteria\CancelCallCriteria.cs" />
+    <Compile Include="Models\Criteria\MakeCallCriteria.cs" />
+    <Compile Include="Models\Criteria\SlotLockCallCriteria.cs" />
+    <Compile Include="Models\Criteria\TableCallCriteria.cs" />
+    <Compile Include="Models\OAuthSigniture.cs" />
+    <Compile Include="Models\Parameters\CallParameters.cs" />
+    <Compile Include="Models\AuthorizationHeader.cs" />
+    <Compile Include="Models\Criteria\ICallCriteria.cs" />
+    <Compile Include="Models\Criteria\RestaurantCallCriteria.cs" />
+    <Compile Include="Models\Parameters\CancelParameters.cs" />
+    <Compile Include="Models\Parameters\MakeParameters.cs" />
+    <Compile Include="Models\Parameters\RestaurantParameters.cs" />
+    <Compile Include="Models\Parameters\TableParameters.cs" />
+    <Compile Include="Models\Parameters\QueryParameterComparer.cs" />
+    <Compile Include="Models\Parameters\SlotLockParameters.cs" />
+    <Compile Include="OAuthValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Parameters\QueryParameter.cs" />
+    <Compile Include="Builders\ViewModels\ResponseViewModelBuilder.cs" />
+    <Compile Include="Providers\OAuthSignitureProvider.cs" />
+    <Compile Include="ViewModels\ResponseViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

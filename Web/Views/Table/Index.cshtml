@@ -1,0 +1,21 @@
+﻿@using System.Configuration
+@model Core.ViewModels.ResponseViewModel
+
+@{
+    ViewBag.Title = "Api Tool -> Table";
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+
+@Html.Partial("Partials/_partnerDetails")
+
+<form action="/table/invoke" method="POST">
+    Restaurant Id: <input type="text" name="restaurantId" value="@Html.Raw(ConfigurationManager.AppSettings["RestaurantId"])"><br />
+    Party size: <input type="text" name="partySize" value="@Html.Raw(ConfigurationManager.AppSettings["PartySize"])"><br />
+    Date time: <input type="text" name="dateTime" value="@Html.Raw(new DateTime(DateTime.Now.AddDays(1).Year, DateTime.Now.AddDays(1).Month, DateTime.Now.AddDays(1).Day, 19, 00, 00))"><br />
+    <br /><br />             
+    <input type="submit" value="Get results"> 
+            
+    <a href="/table">Start again</a>
+</form> 
+
+@Html.Partial("Partials/_output", Model)

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    <style>
+        body { margin: auto; width: 1000px; }
+        #nav { float: left; width: 250px;height: 100%; }
+        #content { margin-left: 300px; }
+
+        .medium-input { width: 500px;height: 100px; }
+        .large-input { width: 100%;height: 400px; }
+    </style>
+</head>
+    <body>
+        <div id="nav">
+            @Html.Partial("Partials/_nav")
+        </div>
+        <div id="content">
+            @RenderBody()
+        </div>
+    </body>
+</html>

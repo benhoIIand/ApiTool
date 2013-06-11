@@ -1,0 +1,30 @@
+﻿@model Core.ViewModels.ResponseViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    
+    <style>
+        .medium-input { width: 500px;height: 100px; }
+        .large-input { width: 100%;height: 600px; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>API request:</h1>
+        <h2>@Html.Raw(Model.Url)</h2>
+        @Html.TextAreaFor(m => m.AuthHeaders, new { @class = "medium-input" })
+        @Html.TextAreaFor(m => m.PostParameters, new { @class = "medium-input" })
+        
+        <h1>API response:</h1>
+        @Html.TextAreaFor(m => m.Response, new { @class = "large-input" })
+    </div>
+</body>
+</html>

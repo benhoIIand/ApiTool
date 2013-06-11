@@ -1,0 +1,30 @@
+﻿@model Core.ViewModels.ResponseViewModel
+
+@if (!string.IsNullOrEmpty(Model.Url))
+{
+    <h1>API request:</h1>
+    <h3>@Html.Raw(Model.Url)</h3>
+    <br />
+}
+
+@if (!string.IsNullOrEmpty(Model.AuthHeaders))
+{
+    @Html.Raw("Authentication params:")
+    @Html.TextAreaFor(m => m.AuthHeaders, new {@class = "medium-input"})
+    <br />
+    <br />
+}
+
+@if (Model.PostParameters != null && Model.PostParameters.Any())
+{
+    @Html.Raw("POST params:")
+    @Html.TextAreaFor(m => m.PostParameters, new {@class = "medium-input"})
+    <br />
+    <br />
+}
+
+@if (!string.IsNullOrEmpty(Model.Response))
+{
+    <h1>API response:</h1>
+    @Html.TextAreaFor(m => m.Response, new {@class = "large-input"})
+}

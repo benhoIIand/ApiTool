@@ -1,0 +1,21 @@
+﻿@using System.Configuration
+@model Core.ViewModels.ResponseViewModel
+
+@{
+    ViewBag.Title = "Api Tool -> Cancel";
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+
+@Html.Partial("Partials/_partnerDetails")
+
+<form action="/cancel/invoke" method="POST">
+    Restaurant Id: <input type="text" name="restaurantId" value="@Html.Raw(ConfigurationManager.AppSettings["RestaurantId"])"><br />
+    Confirmation number: <input type="text" name="confirmationNumber"><br />                  
+    Email: <input type="text" name="email"><br />
+    <br /><br />     
+    <input type="submit" value="Get results"> 
+            
+    <a href="/cancel">Start again</a>
+</form> 
+
+@Html.Partial("Partials/_output", Model)
